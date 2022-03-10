@@ -37,7 +37,7 @@ class Task2Test {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"10, Result: 10=2*5, Check result: 2*5=10", "106, Result: 106=2*53, Check result: 2*53=106"})
+    @CsvSource(value = {"10, Результат: 10=2*5, Проверка результата: 2*5=10", "106, Результат: 106=2*53, Проверка результата: 2*53=106"})
     void testSolution(Integer input, String expectedFirstResult, String expectedSecondResult) {
         Task2 task2 = new Task2(input);
         task2.solution();

@@ -21,8 +21,8 @@ public class Task2 {
 
     public boolean evaluate() {
         if (!getSimpleMultipliers(number)) {
-            System.out.println("Number doesn't have simple multipliers " +
-                    "because equal zero or one or you wrote negative number!");
+            System.out.println("Число не имеет простых множителей " +
+                    "потому что равно 0 или 1, или вы написали отрицательной число!");
             return false;
         }
         return true;
@@ -51,8 +51,8 @@ public class Task2 {
                     .stream()
                     .map(x -> x.toString())
                     .collect(Collectors.joining("*"));
-            System.out.printf("Result: %d=%s\n", number, result);
-            System.out.printf("Check result: %s=%d\n", result, simpleMultipliers
+            System.out.printf("Результат: %d=%s\n", number, result);
+            System.out.printf("Проверка результата: %s=%d\n", result, simpleMultipliers
                     .stream()
                     .reduce((x, y) -> x * y)
                     .get());
