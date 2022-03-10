@@ -16,17 +16,6 @@ public class Task1 {
         this.text = text;
     }
 
-    public Integer evaluateUsingStream() {
-        String br = Arrays.stream(text.split("[^0-9]"))
-                .filter(s -> !s.equals(""))
-                .reduce(String::concat)
-                .orElse("0");
-        return Stream.of(br.split(""))
-                .map(Integer::parseInt)
-                .reduce(Integer::sum)
-                .get();
-    }
-
     public Integer evaluateUsingRegex() {
         Pattern pattern = Pattern.compile("[0-9]");
         Matcher matcher = pattern.matcher(text);

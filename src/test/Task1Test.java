@@ -16,13 +16,6 @@ class Task1Test {
 
     @ParameterizedTest
     @CsvSource(value = {"sfx7879wef789ce123we, 61", "d45e12, 12", "asd, 0", "421, 7"})
-    void testEvaluateUsingStream(String input, Integer expected) {
-        task1 = new Task1(input);
-        assertEquals(expected, task1.evaluateUsingStream());
-    }
-
-    @ParameterizedTest
-    @CsvSource(value = {"sfx7879wef789ce123we, 61", "d45e12, 12", "asd, 0", "421, 7"})
     void testEvaluateUsingRegex(String input, Integer expected) {
         task1 = new Task1(input);
         assertEquals(expected, task1.evaluateUsingRegex());

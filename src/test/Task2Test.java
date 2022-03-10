@@ -21,7 +21,7 @@ class Task2Test {
     }
 
     @ParameterizedTest
-            @ValueSource(ints = {10, 5})
+            @ValueSource(ints = {10, 5, 2, 100})
             void isHaveSimpleMultipliers(Integer input) {
         Task2 task2 = new Task2(input);
         assertTrue(task2.evaluate());

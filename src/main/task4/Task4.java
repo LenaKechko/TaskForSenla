@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/*4. Создайте программу, которая будет получать число и печатать
+его в следующем формате (формы цифр можно придумать свои,
+главное, чтобы они читались на экране):
+(*) Дополнительно: сделайте так, чтобы наибольшая цифра состояла не из ‘*’,
+а из соответствующих маленьких (обычных) цифр.*/
 public class Task4 {
 
     private List<String> drawList = new ArrayList<>();
