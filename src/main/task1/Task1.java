@@ -1,4 +1,4 @@
-package task1;
+package main.task1;
 
 import java.util.Arrays;
 import java.util.regex.Matcher;
@@ -17,7 +17,6 @@ public class Task1 {
     }
 
     public Integer evaluateUsingStream() {
-        // 1ый метод: через stream
         String br = Arrays.stream(text.split("[^0-9]"))
                 .filter(s -> !s.equals(""))
                 .reduce(String::concat)
@@ -29,7 +28,6 @@ public class Task1 {
     }
 
     public Integer evaluateUsingRegex() {
-        // 2ой метод: через регулярные выражения
         Pattern pattern = Pattern.compile("[0-9]");
         Matcher matcher = pattern.matcher(text);
         Integer sum = 0;

@@ -1,4 +1,4 @@
-package task5;
+package main.task5;
 
 public class Subject {
 

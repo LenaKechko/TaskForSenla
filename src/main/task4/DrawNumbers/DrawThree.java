@@ -1,22 +1,21 @@
-package task4.DrawNumbers;
+package main.task4.DrawNumbers;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class DrawEight extends Draw {
+public class DrawThree extends Draw {
 
-    final static int COUNT_SYMBOLS = 17;
+    final static int COUNT_SYMBOLS = 14;
 
-    public DrawEight() {
+    public DrawThree() {
         super(COUNT_SYMBOLS);
     }
 
     public List<String> getMaket() {
         List<String> maketNumber = List.of(" %s%s%s ",
                 "%s   %s",
-                "%s   %s",
-                " %s%s%s ",
-                "%s   %s",
+                "    %s",
+                "  %s%s ",
+                "    %s",
                 "%s   %s",
                 " %s%s%s ");
         return maketNumber;

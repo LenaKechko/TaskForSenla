@@ -1,6 +1,5 @@
-package task4.DrawNumbers;
+package main.task4.DrawNumbers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DrawSeven extends Draw {

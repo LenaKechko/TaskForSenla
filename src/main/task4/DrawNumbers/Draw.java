@@ -1,4 +1,4 @@
-package task4.DrawNumbers;
+package main.task4.DrawNumbers;
 
 import java.util.List;
 

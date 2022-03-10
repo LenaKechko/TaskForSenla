@@ -1,8 +1,6 @@
-package task4.DrawNumbers;
+package main.task4.DrawNumbers;
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class DrawOne extends Draw {
 

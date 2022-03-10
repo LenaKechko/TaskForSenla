@@ -1,6 +1,6 @@
-package task4;
+package main.task4;
 
-import task4.DrawNumbers.*;
+import main.task4.DrawNumbers.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

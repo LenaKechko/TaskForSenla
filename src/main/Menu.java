@@ -1,9 +1,11 @@
-import task1.Task1;
-import task2.Task2;
-import task3.Task3;
-import task4.Task4;
-import task4.InputDate;
-import task5.Task5;
+package main;
+
+import main.task1.Task1;
+import main.task2.Task2;
+import main.task3.Task3;
+import main.task4.Task4;
+import main.task4.InputDate;
+import main.task5.Task5;
 
 import java.util.*;
 

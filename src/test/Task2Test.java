@@ -1,7 +1,10 @@
 package test;
 
 import org.junit.jupiter.api.*;
-import task2.Task2;
+import main.task2.Task2;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -17,35 +20,28 @@ class Task2Test {
         System.setOut(new PrintStream(output));
     }
 
-    @Test
-    void testEvaluate() {
-        Task2 task2 = new Task2(10);
+    @ParameterizedTest
+            @ValueSource(ints = {10, 5})
+            void isHaveSimpleMultipliers(Integer input) {
+        Task2 task2 = new Task2(input);
         assertTrue(task2.evaluate());
-        task2 = new Task2(5);
-        assertTrue(task2.evaluate());
-        task2 = new Task2(1);
-        assertFalse(task2.evaluate());
-        task2 = new Task2(-1);
-        assertFalse(task2.evaluate());
+        assertTrue(task2.getSimpleMultipliers(input));
     }
 
-    @Test
-    void testGetSimpleMultipliers() {
-        Task2 task2 = new Task2();
-        assertTrue(task2.getSimpleMultipliers(10));
-        assertTrue(task2.getSimpleMultipliers(5));
-        assertFalse(task2.getSimpleMultipliers(1));
-        assertFalse(task2.getSimpleMultipliers(0));
+    @ParameterizedTest
+    @ValueSource(ints = {1, -1})
+    void isNotHaveSimpleMultipliers(Integer input) {
+        Task2 task2 = new Task2(input);
+        assertFalse(task2.evaluate());
+        assertFalse(task2.getSimpleMultipliers(input));
     }
 
-    @Test
-    void testSolution() {
-        Task2 task2 = new Task2(10);
+    @ParameterizedTest
+    @CsvSource(value = {"10, Result: 10=2*5, Check result: 2*5=10", "106, Result: 106=2*53, Check result: 2*53=106"})
+    void testSolution(Integer input, String expectedFirstResult, String expectedSecondResult) {
+        Task2 task2 = new Task2(input);
         task2.solution();
-        task2 = new Task2(106);
-        task2.solution();
-        String textExpected = String.format("Result: 10=2*5\nCheck result: 2*5=10\n");
-        textExpected += String.format("Result: 106=2*53\nCheck result: 2*53=106\n");
+        String textExpected = String.format(expectedFirstResult + "\n" + expectedSecondResult + "\n");
         assertEquals(textExpected, output.toString());
     }
 
